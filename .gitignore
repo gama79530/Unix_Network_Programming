@@ -1,0 +1,12 @@
+# black list
+.vscode
+
+*.o
+*.a
+
+daytimetcpcli 
+daytimetcpcliv6 
+daytimetcpsrv
+
+
+# white list
