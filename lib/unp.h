@@ -19,3 +19,11 @@ int Accept(int fd, struct sockaddr *sa, socklen_t *salenptr);
 // wrapunix.c
 void Close(int fd);
 void Write(int fd, void *ptr, size_t nbytes);
+// sock_ntop.c
+char* sock_ntop(const SA *sa, socklen_t salen);
+// readn.c
+ssize_t readn(int fd, void *vptr, size_t n);
+// readline.c
+static ssize_t my_read(int fd, char *ptr);
+ssize_t readline(int fd, void *vptr, size_t maxlen);
+ssize_t readlinebuf(void **vptrptr);
