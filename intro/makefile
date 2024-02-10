@@ -1,7 +1,7 @@
 CC = gcc
 CFLAGS = -static -I../lib -L../lib -llib
 
-PROGS = daytimetcpcli daytimetcpcliv6 daytimetcpsrv byteorder
+PROGS = daytimetcpcli daytimetcpcliv6 daytimetcpsrv byteorder daytimetcpsrv1
 
 all: $(PROGS)
 
@@ -13,6 +13,9 @@ daytimetcpcliv6: daytimetcpcliv6.c
 	$(CC) $^ $(CFLAGS) -o $@
 
 daytimetcpsrv: daytimetcpsrv.c
+	$(CC) $^ $(CFLAGS) -o $@
+
+daytimetcpsrv1: daytimetcpsrv1.c
 	$(CC) $^ $(CFLAGS) -o $@
 
 clean:

@@ -27,3 +27,7 @@ ssize_t readn(int fd, void *vptr, size_t n);
 static ssize_t my_read(int fd, char *ptr);
 ssize_t readline(int fd, void *vptr, size_t maxlen);
 ssize_t readlinebuf(void **vptrptr);
+// wraplib.c
+const char *Inet_ntop(int family, const void *addrptr, char *strptr, size_t len);
+// sockfd_to_family.c
+int sockfd_to_family(int sockfd);

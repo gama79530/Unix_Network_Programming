@@ -19,6 +19,7 @@ void Bind(int fd, const SA *sa, socklen_t salen){
     }
 }
 
+/* sec 4.5, fig 4-9, page 86 */
 void Listen(int fd, int backlog){
     char *ptr;
     

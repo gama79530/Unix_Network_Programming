@@ -44,6 +44,14 @@ int main(int argc, char **argv){
         exit(EXIT_FAILURE);
     }
 
+    /* exercise 4.3, page 96 */
+    // struct sockaddr_storage ss;
+    // socklen_t len = sizeof(ss);
+    // getsockname(sockfd, (SA*)&ss, &len);
+    // char *addr_str = sock_ntop((SA*)&ss, len);
+    // fputs(addr_str, stdout);
+    // fputc('\n', stdout);
+
     /* standard */
     while(0 < (n = read(sockfd, recvline, MAXLINE))){
         recvline[n] = '\0';    /* null terminate */
