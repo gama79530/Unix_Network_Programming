@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include "unp.h"
 
 /* sec 3.9, fig 3-16, page 73 */
 ssize_t writen(int fd, const void *vptr, size_t n){
@@ -21,4 +21,11 @@ ssize_t writen(int fd, const void *vptr, size_t n){
         ptr   += nwritten;
     }
     return n;
+}
+
+void Writen(int fd, void *ptr, size_t nbytes){
+	if(nbytes != writen(fd, ptr, nbytes)){
+        perror("writen error");
+        exit(1);
+    }
 }

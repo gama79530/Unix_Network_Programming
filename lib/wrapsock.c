@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include "unp.h"
 
 /* sec 1.4, fig 1-7, page 11vscode-remote://wsl%2Bubuntu-22.04/home/rein/workspace/Unix-Network-Programming/lib/wrappthread.c */
 int Socket(int family, int type, int protocol){
@@ -50,4 +50,11 @@ again:
     }
 
     return n;
+}
+
+void Connect(int fd, const SA *sa, socklen_t salen){
+    if(0 > connect(fd, sa, salen)){
+        perror("connect error");
+        exit(EXIT_FAILURE);
+    }
 }

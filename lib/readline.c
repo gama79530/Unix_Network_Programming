@@ -1,4 +1,4 @@
-#include	"unp.h"
+#include "unp.h"
 
 static int	read_cnt;
 static char	*read_ptr;
@@ -54,4 +54,13 @@ ssize_t readlinebuf(void **vptrptr){
         *vptrptr = read_ptr;
     }
     return read_cnt;
+}
+
+ssize_t Readline(int fd, void *ptr, size_t maxlen){
+    ssize_t n;
+    if (0 > (n = readline(fd, ptr, maxlen))){
+        perror("readline error");
+        exit(EXIT_FAILURE);
+    }
+    return n;
 }

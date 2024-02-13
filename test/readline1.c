@@ -1,6 +1,6 @@
 #include "unp.h"
 
-/* sec 3.9, fig 1-17, page 73 */
+/* sec 3.9, fig 3-17, page 73 */
 ssize_t readline(int fd, void *vptr, size_t maxlen){
     ssize_t n = 0, rc = 0;
     char c, *ptr = NULL;

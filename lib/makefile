@@ -1,7 +1,20 @@
 CC = gcc
 CFLAG = -c
 
-OBJS = wrapsock.o wrappthread.o wrapunix.o sock_ntop.o readn.o writen.o readline.o wraplib.o sockfd_to_family.o
+OBJS = \
+	wrapsock.o \
+	wrappthread.o \
+	wrapunix.o \
+	sock_ntop.o \
+	readn.o \
+	writen.o \
+	readline.o \
+	wraplib.o \
+	sockfd_to_family.o \
+	str_echo.o \
+	str_cli.o \
+	wrapstdio.o \
+	signal.o
 
 all: $(OBJS)
 

@@ -1,5 +1,5 @@
 CC = gcc
-CFLAGS = -c -static -I../lib -L../lib -llib
+CFLAGS = -c -I../lib
 
 OBJS = readline1.o
 
