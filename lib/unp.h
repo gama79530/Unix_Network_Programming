@@ -1,3 +1,6 @@
+#ifndef _UNP_H
+#define _UNP_H
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -30,6 +33,7 @@ pid_t Fork(void);
 char* sock_ntop(const SA *sa, socklen_t salen);
 // readn.c
 ssize_t readn(int fd, void *vptr, size_t n);
+ssize_t Readn(int fd, void *ptr, size_t nbytes);
 // readline.c
 static ssize_t my_read(int fd, char *ptr);
 ssize_t readline(int fd, void *vptr, size_t maxlen);
@@ -53,3 +57,5 @@ void str_cli(FILE *fp, int sockfd);
 // signal.c
 Sigfunc *signal(int signo, Sigfunc *func);
 Sigfunc *Signal(int signo, Sigfunc *func);
+
+#endif

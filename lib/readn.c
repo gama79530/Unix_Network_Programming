@@ -24,3 +24,13 @@ ssize_t readn(int fd, void *vptr, size_t n){
     }
     return n - nleft;   /* return >= 0 */
 }
+
+ssize_t Readn(int fd, void *ptr, size_t nbytes){
+    ssize_t n;
+
+    if(0 > (n = readn(fd, ptr, nbytes))){
+        perror("readn error");
+        exit(EXIT_FAILURE);
+    }
+    return n;
+}
